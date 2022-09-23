@@ -15,11 +15,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- this page css -->
-    <link rel="stylesheet" href="../css/registerPage.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/loginPage.css">
 </head>
 
 <body>
+	<header>
+        <div class="header-con">
+            <div class="logo-icon">
+                <a href=""><i class="fa-solid fa-desktop"></i></a>
+            </div>
+            <div class="r-icon">
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+    </header>
     <div class="body-container">
         <form action="" class="form-container">
             <h1>註冊</h1>
