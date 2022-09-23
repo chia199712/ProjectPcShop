@@ -83,14 +83,14 @@ form .input-container{
 .form-in:focus + label{
     font-size: .7rem;
     color: #000;
-    top: -1rem;
+    top: -1.1rem;
     left: .2rem;
 }
 
 .form-in:not(:focus).form-in:not(:placeholder-shown) + label{
     font-size: .7rem;
     color: #000;
-    top: -1rem;
+    top: -1.1rem;
     left: .2rem;
 }
 
