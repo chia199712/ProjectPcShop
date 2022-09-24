@@ -25,7 +25,7 @@
             <h1>PC網路購物商城</h1>
             <div class="btn-container">
                 <a href="./loginPage.jsp">會員登入</a>
-                <a href="#">先去逛逛</a>
+                <a href="./shoppingPage.jsp">先去逛逛</a>
             </div>
         </section>
     </div>

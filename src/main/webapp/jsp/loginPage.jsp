@@ -24,7 +24,7 @@
 	<header>
         <div class="header-con">
             <div class="logo-icon">
-                <a href=""><i class="fa-solid fa-desktop"></i></a>
+                <a href="./shoppingPage.jsp"><i class="fa-solid fa-desktop"></i></a>
             </div>
             <div class="r-icon">
                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>

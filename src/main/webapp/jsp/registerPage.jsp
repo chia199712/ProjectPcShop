@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- this page css -->
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/loginPage.css">
+    <link rel="stylesheet" href="../css/registerPage.css">
 </head>
 
 <body>
-	<header>
+    <header>
         <div class="header-con">
             <div class="logo-icon">
-                <a href=""><i class="fa-solid fa-desktop"></i></a>
+                <a href="./shoppingPage.jsp"><i class="fa-solid fa-desktop"></i></a>
             </div>
             <div class="r-icon">
                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
@@ -35,25 +35,37 @@
         </div>
     </header>
     <div class="body-container">
-        <form action="" class="form-container">
+        <form action=".\RegisterServlet" method="post" class="form-container">
             <h1>註冊</h1>
             <div class="input-container">
                 <div class="input-con">
-                    <input class="form-in" type="text" name="uname" id="uname" placeholder=" " required>
+                    <input class="form-in" type="text" name="cus_name" id="uname" placeholder=" " required>
                     <label for="uname">Your Name</label>
                 </div>
                 <div class="input-con">
-                    <input class="form-in" type="email" name="email" id="email" placeholder=" " required>
+                    <input class="form-in" type="email" name="cus_id" id="email" placeholder=" " required>
                     <label for="email">Email</label>
                 </div>
                 <div class="input-con">
-                    <input class="form-in" type="password" name="password" id="ps1" placeholder=" " value="" required>
+                    <input class="form-in" type="password" name="cus_pwd" id="ps1" placeholder=" " value="" required>
                     <label for="password">Password</label>
                 </div>
                 <div class="input-con">
-                    <input class="form-in" type="password" name="conpassword" id="ps2" placeholder=" " value=""
+                    <input class="form-in" type="password" name="cus_pwd_check" id="ps2" placeholder=" " value=""
                         required>
-                    <label for="password">Confirm password</label>
+                    <label for="ps2">Confirm password</label>
+                </div>
+                <div class="input-con">
+                    <input class="form-in" type="tel" name="cus_phone" id="phone" placeholder=" " maxlength="10">
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="input-con">
+                    <input class="form-in" type="text" name="cus_add" id="address" placeholder=" ">
+                    <label for="address">Address</label>
+                </div>
+                <div class="input-con">
+                    <input class="form-in" type="text" name="cus_crdt_no" id="crdt" placeholder=" " maxlength="12">
+                    <label for="crdt">Credit Card Number</label>
                 </div>
             </div>
             <input id="btnsub" type="submit" value="註冊"></input>
