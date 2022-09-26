@@ -63,7 +63,7 @@
                         <p>ITEM_DETAIL</p>
                         <div class="box-footer">
                             <div class="add-cart-btn">
-                                <input type="button" value="">
+                                <input type="button" name="ITEM_TITLE" value="">
                                 <i class="fa-solid fa-cart-plus"></i><span>| 加入購物車</span>                        
                             </div>
                             <h5><span>$ITEM_PRICE</span></h5>
