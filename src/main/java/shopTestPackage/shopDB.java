@@ -1,6 +1,7 @@
 package shopTestPackage;
 
 import java.io.Serializable;
+import java.sql.Blob;
 
 public class shopDB implements Serializable {
 	
@@ -8,6 +9,7 @@ public class shopDB implements Serializable {
 	private static String[] itName;	 
 	private static String[] itDetail;	 
 	private static Integer[] itPrice;
+	private static String[] itImg;
 	
 	
 	public static void setItNo(Integer[] pitNo) {
@@ -25,8 +27,12 @@ public class shopDB implements Serializable {
 	public static void setItPrice(Integer[] pitPrice) {
 		itPrice = pitPrice;
 	}
+	
+	public static void setItImg(String[] pitImg) {
+		itImg = pitImg;
+	}
 		 
-	/** Return the number of books in the database */
+	/** Return the size in the database */
 	public static int size() {
 	       return itNo.length;
 	}
@@ -43,7 +49,12 @@ public class shopDB implements Serializable {
 		 
 	/** Return the price of the given bookID */
     public static float getItPrice(int shopNO) {
-	      return itPrice[shopNO];
+	      return itPrice[shopNO].floatValue();
+    }
+    
+    /** Return the price of the given bookID */
+    public static String getItImg(int shopNO) {
+	      return itImg[shopNO];
     }
 
 }

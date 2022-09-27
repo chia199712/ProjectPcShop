@@ -17,6 +17,7 @@
 				out.println("<td>" + shopDB.getItName(i) + "</td>");
 				out.println("<td><a href='./shopDetailTest.jsp?itName=" + shopDB.getItName(i) + "'>" + shopDB.getItDetail(i) + "</a>" + "</td>");
 				out.println("<td>" + shopDB.getItPrice(i) + "</td>");
+				out.println("<td><img src='" + shopDB.getItImg(i) + "' alt='" + shopDB.getItName(i) + " '></td>");
 				out.println("</tr>");
 			}
 		%>

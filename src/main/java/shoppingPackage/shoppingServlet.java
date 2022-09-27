@@ -1,4 +1,4 @@
-package shopTestPackage;
+package shoppingPackage;
 
 import java.io.*;
 import java.sql.Blob;
@@ -23,8 +23,8 @@ import javax.servlet.annotation.WebServlet;
 /**
  * Servlet implementation class shopServletTest
  */
-@WebServlet("/shopServletTest")
-public class shopServletTest extends HttpServlet {
+@WebServlet("/shoppingServlet")
+public class shoppingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	DataSource ds;
@@ -49,11 +49,12 @@ public class shopServletTest extends HttpServlet {
 		  Connection conn = null;
 	      Statement  stmt = null;
 	      
-	      List <Integer> itNoList = new  ArrayList <Integer> ();
-	      List <String> itNameList =  new  ArrayList <String> () ;
-	      List <String> itDetailList = new  ArrayList <String> ();
-	      List <Integer> itPriceList = new  ArrayList <Integer> ();
-	      List <String> itImgList = new  ArrayList <String> ();
+	      List <Integer> pro_noList = new  ArrayList <Integer> ();
+	      List <String> pro_nameList =  new  ArrayList <String> () ;
+	      List <Integer> pro_priceList = new  ArrayList <Integer> ();
+	      List <Integer> pro_amountList = new  ArrayList <Integer> ();
+	      List <String> pro_infoList = new  ArrayList <String> ();
+	      List <String> pro_imageList = new  ArrayList <String> ();
 	      
 	      try {
 	         	 
@@ -62,21 +63,22 @@ public class shopServletTest extends HttpServlet {
 	 
 	         // Normal JBDC programming hereafter. Close the Connection to return it to the pool
 	         stmt = conn.createStatement();
-	         ResultSet rset = stmt.executeQuery("SELECT itNo, itName, itDetail, itPrice, itImg FROM shoptest");
+	         ResultSet rset = stmt.executeQuery("SELECT pro_no, pro_name, pro_price, pro_amount, pro_info, pro_image FROM pro_item");
 	        
 	         while(rset.next()) {       
-	        	itNoList.add(rset.getInt("itNo"));
-	        	itNameList.add(rset.getString("itName"));
-	        	itDetailList.add(rset.getString("itDetail"));
-	        	itPriceList.add(rset.getInt("itPrice"));
-	        	itImgList.add(rset.getString("itImg"));
+	        	 pro_noList.add(rset.getInt("pro_no"));
+	        	 pro_nameList.add(rset.getString("pro_name"));
+	        	 pro_priceList.add(rset.getInt("pro_price"));
+	        	 pro_amountList.add(rset.getInt("pro_amount"));
+	        	 pro_infoList.add(rset.getString("pro_info"));
+	        	 pro_imageList.add(rset.getString("pro_image"));
 	         }
-	         shopDB.setItNo((Integer[]) itNoList.toArray(new Integer[0]));
-	         shopDB.setItName((String[]) itNameList.toArray(new String[0]));
-	         shopDB.setItDetail((String[]) itDetailList.toArray(new String[0]));
-	         shopDB.setItPrice((Integer[]) itPriceList.toArray(new Integer[0]));
-	         shopDB.setItImg((String[]) itImgList.toArray(new String[0]));
-
+	         shoppingDB.setPro_no((Integer[]) pro_noList.toArray(new Integer[0]));
+	         shoppingDB.setPro_name((String[]) pro_nameList.toArray(new String[0]));
+	         shoppingDB.setPro_price((Integer[]) pro_priceList.toArray(new Integer[0]));
+	         shoppingDB.setPro_amount((Integer[])  pro_amountList.toArray(new Integer[0]));
+	         shoppingDB.setPro_info((String[]) pro_infoList.toArray(new String[0]));
+	         shoppingDB.setPro_image((String[]) pro_imageList.toArray(new String[0]));
 	      } catch (SQLException ex) {
 	         ex.printStackTrace();
 	      } finally {
@@ -107,9 +109,9 @@ public class shopServletTest extends HttpServlet {
 		// Retrieve the current session, or create a new session if no session exists.
 	      HttpSession session = request.getSession(true);
 	 
-	      System.out.println(shopDB.size());
+	      System.out.println(shoppingDB.size());
 	      // For dispatching the next Page
-	      String nextPage = "/shopTest.jsp";
+	      String nextPage = "/jsp/index.jsp";
 	      ServletContext servletContext = getServletContext();
 	      RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher(nextPage);
 	      requestDispatcher.forward(request, response);

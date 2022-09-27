@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.*, shoppingPackage.*"%>
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -54,7 +54,27 @@
             </ul>
         </article>
 
-        <article class="all-item row">
+        <article class="all-item">
+        
+        	<form class="row" action = "shopServletTest" method = "POST">
+        			<%
+	        			for (int i = 0; i < shoppingDB.size(); i++) {
+	        				out.println("<div class='box-container col-4'>");
+	        				out.println("<div class='box'>");
+							out.println("<div class='item-img'><img src='" +  shoppingDB.getPro_image(i) + "' alt=''></div>");
+							out.println("<h3><a href='./itemPage.jsp'>" + shoppingDB.getPro_name(i) + "</a></h3>");
+							out.println("<p style='font-size: .8rem'>" + shoppingDB.getPro_info(i) + "</p>");
+							out.println("<div class='box-footer'>");
+							out.println("<p>剩餘數量: " + shoppingDB.getPro_amount(i) + "</p>");
+							out.println("<h5><span>$: " + shoppingDB.getPro_price(i) + "</span></h5>");
+							out.println("</div>");
+							out.println("</div>");
+							out.println("</div>");
+								}
+        				%>
+			</form>
+        
+            <%--
             <template id="tem" style="display: none;">
                 <div class="box-container col-4">
                     <div class="box">
@@ -71,6 +91,7 @@
                     </div>
                 </div>
             </template>
+             --%>
         </article>
     </section>
 
@@ -83,6 +104,7 @@
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- my js -->
+    <%--
     <script>
         const imgStr = '../img/shopImg/IMG_NAME.jpg';
 
@@ -102,6 +124,7 @@
             }
         })
     </script>
+     --%>
 </body>
 
 </html>

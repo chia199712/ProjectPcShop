@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.*, shoppingPackage.*"%>
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- this page css -->
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
         <section class="main-container">
             <h1>PC網路購物商城</h1>
             <div class="btn-container">
-                <a href="./loginPage.jsp">會員登入</a>
-                <a href="./shoppingPage.jsp">先去逛逛</a>
+                <a href="./jsp/loginPage.jsp">會員登入</a>
+                <a href="./jsp/shoppingPage.jsp">先去逛逛</a>
             </div>
         </section>
     </div>
