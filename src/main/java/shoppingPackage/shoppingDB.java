@@ -11,6 +11,7 @@ public class shoppingDB implements Serializable {
 	private static String[] pro_info;
 	private static String[] pro_image;
 	
+	private static int itemInd;
 	
 	public static void setPro_no(Integer[] ppro_no) {
 		pro_no = ppro_no;
@@ -35,6 +36,16 @@ public class shoppingDB implements Serializable {
 	public static void setPro_image(String[] ppro_image) {
 		pro_image=ppro_image;
 	}
+	
+	
+	
+	
+	public static void setItemPageIndex(int Ind) {
+		itemInd = Ind;
+	}
+	
+	
+	
 		 
 	/** Return the size of the database table */
 	public static int size() {
@@ -65,5 +76,20 @@ public class shoppingDB implements Serializable {
     public static String getPro_image(int shopNO) {
 	      return pro_image[shopNO];
   }
+    
+    
+    
+    
+    public static int getItemPageIndex() {
+    	return itemInd;
+    }
+    
+    public static String getItemPage_name() {
+    	return pro_name[itemInd];
+    }
+    
+    public static String getItemPage_info() {
+    	return pro_info[itemInd];
+    }
 
 }

@@ -95,15 +95,15 @@ public class shoppingServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doPost(request, response);  // Same as doGet()
+		doGet(request, response);  // Same as doGet()
 	}
 	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
 		// Retrieve the current session, or create a new session if no session exists.
@@ -115,6 +115,10 @@ public class shoppingServlet extends HttpServlet {
 	      ServletContext servletContext = getServletContext();
 	      RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher(nextPage);
 	      requestDispatcher.forward(request, response);
+	      
+	      int itemPageIndex = Integer.parseInt(request.getParameter("index"));
+	      System.out.println(itemPageIndex);
+	      shoppingDB.setItemPageIndex(itemPageIndex);
 	}
 
 }

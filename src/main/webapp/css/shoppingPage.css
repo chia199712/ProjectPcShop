@@ -87,6 +87,10 @@ header{
     padding-bottom: 2rem;
 }
 
+.all-item form{
+	display: flex;
+}
+
 .box-container{
     padding: 1.5rem;
 }
@@ -126,14 +130,14 @@ header{
     position: relative;
 }
 
-.box h3 a{
+.box h3{
     color: rgb(73, 73, 73);
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.box h3 a:hover{
+.box h3:hover{
     color: #000;
 }
 

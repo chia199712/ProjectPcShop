@@ -56,13 +56,19 @@
 
         <article class="all-item">
         
-        	<form class="row" action = "shopServletTest" method = "POST">
-        			<%
+        	<form action = "shopServletTest" method = "GET">
+        			<div class="all-box row">
+        				<%
 	        			for (int i = 0; i < shoppingDB.size(); i++) {
 	        				out.println("<div class='box-container col-4'>");
 	        				out.println("<div class='box'>");
 							out.println("<div class='item-img'><img src='" +  shoppingDB.getPro_image(i) + "' alt=''></div>");
-							out.println("<h3><a href='./itemPage.jsp'>" + shoppingDB.getPro_name(i) + "</a></h3>");
+							out.println("<h3><a href='./itemPage.jsp?index=" + i + "'>");
+							out.println(shoppingDB.getPro_name(i));
+							
+							out.println("<input type='hidden' name='index' value='" + i + "'>");
+							
+							out.println("</a></h3>");
 							out.println("<p style='font-size: .8rem'>" + shoppingDB.getPro_info(i) + "</p>");
 							out.println("<div class='box-footer'>");
 							out.println("<p>剩餘數量: " + shoppingDB.getPro_amount(i) + "</p>");
@@ -72,9 +78,14 @@
 							out.println("</div>");
 								}
         				%>
+        			</div>
 			</form>
         
             <%--
+            out.println("<form action = 'itemServlet' method='GET'>");
+            out.println("<input type='hidden' name='go' value='" + shoppingDB.getPro_name(i) + "'>");
+            out.println("</form>");
+            
             <template id="tem" style="display: none;">
                 <div class="box-container col-4">
                     <div class="box">
