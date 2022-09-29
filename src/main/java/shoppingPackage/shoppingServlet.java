@@ -14,10 +14,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import javax.sql.DataSource;
-
-
-import java.io.IOException;
-
 import javax.servlet.annotation.WebServlet;
 
 /**
@@ -111,14 +107,12 @@ public class shoppingServlet extends HttpServlet {
 	 
 	      System.out.println(shoppingDB.size());
 	      // For dispatching the next Page
-	      String nextPage = "/jsp/index.jsp";
+	      
+	      String  nextPage = "/jsp/index.jsp";
+	      
 	      ServletContext servletContext = getServletContext();
 	      RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher(nextPage);
 	      requestDispatcher.forward(request, response);
-	      
-	      int itemPageIndex = Integer.parseInt(request.getParameter("index"));
-	      System.out.println(itemPageIndex);
-	      shoppingDB.setItemPageIndex(itemPageIndex);
 	}
 
 }

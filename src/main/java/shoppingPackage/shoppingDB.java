@@ -51,6 +51,11 @@ public class shoppingDB implements Serializable {
 	public static int size() {
 	       return pro_no.length;
 	}
+	
+	/** Return the number of the product */
+    public static int getPro_no(int shopNO) {
+	      return pro_no[shopNO].intValue();
+    }
 		 
 	/** Return the title of the given bookID */
 	public static String getPro_name(int shopNO) {

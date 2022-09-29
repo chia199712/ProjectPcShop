@@ -128,13 +128,15 @@ header{
 .box h3{
     margin: 1rem 0;
     position: relative;
+    color: rgb(73, 73, 73);
 }
 
-.box h3{
+a{
+	margin: 1rem 0;
     color: rgb(73, 73, 73);
     font-size: 1rem;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .box h3:hover{
