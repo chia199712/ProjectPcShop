@@ -125,17 +125,17 @@ header{
     align-items: center;
 }
 
-.box h3{
+.box a h3{
     margin: 1rem 0;
     position: relative;
+    font-size: 1rem;
+    font-weight: bold;
     color: rgb(73, 73, 73);
 }
 
 a{
 	margin: 1rem 0;
     color: rgb(73, 73, 73);
-    font-size: 1rem;
-    font-weight: bold;
     text-decoration: none !important;
 }
 

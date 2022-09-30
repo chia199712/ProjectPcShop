@@ -89,9 +89,17 @@ public class shoppingDB implements Serializable {
     	return itemInd;
     }
     
+    public static String getItemPage_image() {
+    	return pro_image[itemInd];
+    }
+    
     public static String getItemPage_name() {
     	return pro_name[itemInd];
     }
+    
+    public static int getItemPage_price() {
+	      return pro_price[itemInd].intValue();
+  }
     
     public static String getItemPage_info() {
     	return pro_info[itemInd];

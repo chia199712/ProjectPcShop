@@ -63,7 +63,7 @@
 	        				out.println("<div class='box-container col-4'>");
 	        				out.println("<div class='box'>");
 							out.println("<div class='item-img'><img src='" +  shoppingDB.getPro_image(i) + "' alt=''></div>");
-							out.println("<a href='./itemPage.jsp?index=" + i + "'><h3>");
+							out.println("<a href='./itemPage.jsp?index=" + i + "'><h3 style='font-size: 1rem; font-weight: bold;'>");
 							out.println(shoppingDB.getPro_name(i));
 							out.println("</h3></a>");
 							out.println("<p style='font-size: .8rem'>" + shoppingDB.getPro_info(i) + "</p>");
